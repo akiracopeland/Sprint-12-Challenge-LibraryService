@@ -10,7 +10,7 @@ public class Library {
 
     @JsonIgnoreProperties(value = "library")
     private Set<LibraryCard> libraryCards = new HashSet<>();
-    private List<CheckableAmount> checkables = new ArrayList<>();;
+    private List<CheckableAmount> checkables = new ArrayList<>();
 
     public Library(String name) {
         this.name = name;

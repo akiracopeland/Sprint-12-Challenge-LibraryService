@@ -1,6 +1,7 @@
 package com.bloomtech.library.models.checkableTypes;
 
 import java.util.HashSet;
+import java.util.Objects;
 
 public abstract class Checkable {
     private String isbn;
@@ -28,5 +29,18 @@ public abstract class Checkable {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Checkable checkable = (Checkable) o;
+        return Objects.equals(isbn, checkable.isbn) && Objects.equals(title, checkable.title);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(isbn, title);
     }
 }
