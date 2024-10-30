@@ -21,8 +21,6 @@ import java.util.Optional;
 @Service
 public class LibraryService {
 
-    //TODO: Implement behavior described by the unit tests in tst.com.bloomtech.library.services.LibraryService
-
     @Autowired
     private LibraryRepository libraryRepository;
 
